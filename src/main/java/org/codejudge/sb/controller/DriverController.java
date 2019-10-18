@@ -23,7 +23,7 @@ public class DriverController {
         this.driverService = driverService;
     }
 
-    @RequestMapping(value = "/driver/register", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/driver/register/", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity register(@RequestBody DriverRequest request) {
         DriverRequest.validateDriverRequest(request);
         Driver driver = driverService.registerDriver(request);
